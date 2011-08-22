@@ -1,1 +1,7 @@
 Please visit our website at http://iiiasn1.sourceforge.net for details.
+
+Installation instructions:
+mkdir build
+cd build
+../configure
+make
