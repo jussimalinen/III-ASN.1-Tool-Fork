@@ -1,0 +1,4 @@
+EXPORTS
+    _wmemcpy @738 NONAME ;_wmemcpy
+    _wmemmove @739 NONAME ;pick any
+    _wmemset @740 NONAME ;_wmemset

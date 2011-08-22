@@ -1,0 +1,12 @@
+$Log: COPYING,v $
+Revision 1.2  2002/07/02 05:28:13  mangelo
+Add VC.Net and GCC 3.1 Support
+
+Revision 1.1.1.1  2001/08/01 07:36:54  mangelo
+Import to SourceForge
+
+The contents of this project are subject to the Mozilla Public License
+Version 1.0 (the "License"); you may not use this file except in
+compliance with the License. You may find a copy of the License in the file
+mpl-1.0.htm which is distributed with this file or in the web page
+http://www.mozilla.org/MPL/

@@ -1,0 +1,26 @@
+/ASN1.dsp/1.4/Wed Aug 21 03:41:16 2002/-kb/
+/ASN1.vcproj/1.3/Fri Dec  2 03:47:00 2005//
+/AVNDecoder.cxx/1.5/Tue Aug  9 18:12:43 2011//
+/AVNEncoder.cxx/1.7/Tue Aug  9 18:12:43 2011//
+/AssocVector.h/1.4/Tue Aug  9 18:12:43 2011//
+/BERDecoder.cxx/1.18/Tue Aug  9 18:12:43 2011//
+/BEREncoder.cxx/1.6/Tue Aug  9 18:12:43 2011//
+/CoderEnv.cxx/1.3/Tue Aug  9 18:12:43 2011//
+/InvalidTracer.cxx/1.4/Tue Aug  9 18:12:43 2011//
+/Makefile.am/1.5/Tue Aug  9 18:12:43 2011//
+/Makefile.in/1.8/Tue Aug  9 18:12:43 2011//
+/PERDecoder.cxx/1.14/Tue Aug  9 18:12:43 2011//
+/PEREncoder.cxx/1.10/Tue Aug  9 18:12:43 2011//
+/ValidChecker.cxx/1.10/Tue Aug  9 18:12:43 2011//
+/asn1.cxx/1.17/Tue Aug  9 18:12:43 2011//
+/asn1.dtf/1.1/Tue Aug 20 22:35:54 2002//
+/asn1.h/1.45/Tue Aug  9 18:12:43 2011//
+/asn1.ignore/1.1/Tue Aug 20 22:35:54 2002//
+/asn1_dll.dsp/1.4/Fri Dec  2 03:47:00 2005/-kb/
+/asn1_dll.vcproj/1.2/Fri Dec  2 03:47:00 2005//
+/asn1_useful.cxx/1.2/Tue Aug  9 18:12:43 2011//
+/asn1_useful.h/1.2/Tue Aug  9 18:12:43 2011//
+/dllmain.cxx/1.1/Wed Aug 21 04:55:09 2002//
+/ios_helper.cxx/1.1/Tue Aug  9 18:12:43 2011//
+/ios_helper.h/1.3/Tue Aug  9 18:12:43 2011//
+D

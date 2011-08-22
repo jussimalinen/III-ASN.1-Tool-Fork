@@ -1,0 +1,158 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "ASN1"=".\asn1\ASN1.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "ASNParser"=".\asnparser\asnparser.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "H323Parser"=".\h323parser\H323Parser.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ASN1
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ASNParser
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "asn1_dll"=".\asn1\asn1_dll.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ASN1
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name makedef
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "asn1test"=".\asn1\testsuite\asn1test.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ASNParser
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name asn1_dll
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "asnh323"=".\asnh323\asnh323.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ASN1
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ASNParser
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "asnh323_dll"=".\asnh323\asnh323_dll.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name asnh323
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name makedef
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "h323test"=".\ASNH323\TESTSUITE\h323test.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name asnh323_dll
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "makedef"=".\makedef\makedef.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

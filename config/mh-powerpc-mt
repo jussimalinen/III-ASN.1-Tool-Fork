@@ -1,0 +1,9 @@
+CC=powerpc-eabi-gcc
+CXX=powerpc-eabi-c++
+CPP=powerpc-eabi-gcc -E
+CXXCPP=powerpc-eabi-c++ -E
+RANLIB=powerpc-eabi-ranlib
+LDFLAGS=-mads -s 
+CFLAGS=-Os -msoft-float
+CXXFLAGS=-Os -fomit-frame-pointer -msoft-float
+CPPFLAGS=-D_MPC850 -D__powerpc__

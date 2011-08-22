@@ -1,0 +1,551 @@
+2002-08-31 00:10  mangelo
+
+	* ChangeLog, configure, configure.in: Avoided __THROW_BAD_ALLOC to
+	be defined twice
+
+2002-08-20 23:55  mangelo
+
+	* asn1/dllmain.cxx: add asn1/dllmain.cxx
+
+2002-08-20 22:41  mangelo
+
+	* iiiasn1.dsw, asn1/ASN1.dsp, asn1/asn1_dll.dsp,
+	asn1/testsuite/asn1test.dsp, asnh323/asnh323.dsp,
+	asnh323/asnh323_dll.dsp, asnh323/testsuite/h323test.dsp,
+	asnparser/asnparser.dsp, h323parser/H323Parser.dsp,
+	makedef/makedef.dsp: make VC6.0 project files binary
+
+2002-08-20 17:35  mangelo
+
+	* ChangeLog, Makefile.am, Makefile.in, aclocal.m4, configure,
+	iiiasn1.dsw, iiiasn1.sln, asn1/ASN1.dsp, asn1/ASN1.vcproj,
+	asn1/AssocVector.h, asn1/Makefile.am, asn1/Makefile.in,
+	asn1/asn1.dtf, asn1/asn1.h, asn1/asn1.ignore, asn1/asn1_dll.dsp,
+	asn1/asn1_dll.vcproj, asn1/testsuite/Makefile.in,
+	asn1/testsuite/asn1test.cpp, asn1/testsuite/asn1test.vcproj,
+	asnh323/Makefile.am, asnh323/Makefile.in, asnh323/asnh323.dsp,
+	asnh323/asnh323.dtf, asnh323/asnh323.ignore,
+	asnh323/asnh323.vcproj, asnh323/asnh323_dll.dsp,
+	asnh323/asnh323_dll.vcproj, asnh323/testsuite/Makefile.in,
+	asnh323/testsuite/h225test.cpp, asnh323/testsuite/h323test.cpp,
+	asnh323/testsuite/h323test.vcproj, asnh323/testsuite/h450test.cpp,
+	asnparser/Makefile.in, asnparser/asnparser.vcproj,
+	asnparser/main.cxx, h323parser/H323Parser.dsp,
+	h323parser/H323Parser.vcproj, makedef/makedef.cpp,
+	makedef/makedef.dsp, makedef/makedef.vcproj: Add MSVC DLL support
+
+2002-08-04 11:02  mangelo
+
+	* asnh323/testsuite/h245test.cpp: circumvent the array and pointer
+	problem in cygwin GCC 2.95.3-5
+
+2002-07-19 00:48  btrummer
+
+	* asn1/PEREncoder.cxx: If an illegal character is found in
+	do_visit(const AbstractString&), false is returned now to abort the
+	encoding.
+
+2002-07-19 00:43  btrummer
+
+	* asn1/PEREncoder.cxx: Aaargh! If encodeConstrainedLength() fails
+	in do_visit(const OCTET_STRING&), false must be returned rather
+	than true.
+
+2002-07-18 05:42  btrummer
+
+	* asn1/PEREncoder.cxx: Removed the assert statement from
+	do_visit(const OCTET_STRING& value).  Replaced the assert in
+	do_visit(const CHOICE& value) with an if-clause.
+
+2002-07-18 01:53  btrummer
+
+	* asn1/: PEREncoder.cxx, asn1.h: Added range checks for
+	PEREncoder's encodeLength(), encodeUnsigned() and
+	encodeConstrainedLength(). Encoding an object which violates its
+	length constraint will fail now.
+
+2002-07-17 06:17  btrummer
+
+	* asn1/asn1.h: Check for the macro __IBMCPP__ rather than _AIX for
+	the last AiX-fix.
+
+2002-07-11 03:34  btrummer
+
+	* asn1/asn1.h: Added AiX-fix for the initialization of
+	Constrained_INTEGER::theInfo.
+
+2002-07-11 02:51  btrummer
+
+	* asn1/asn1.h: Added some InfoType typedefs needed for AiX.
+
+2002-07-11 01:22  btrummer
+
+	* asn1/asn1.h: Fixed the constructor
+	OBJECT_IDENTIFIER(InputIterator, InputIterator, const void*), which
+	raised an internal compiler error on Windows.
+
+2002-07-11 00:51  mangelo
+
+	* README, asnh323/testsuite/h245test.cpp: Add README file
+
+2002-07-10 17:46  mangelo
+
+	* AUTHORS, ChangeLog, Makefile.in, NEWS, aclocal.m4, configure,
+	asn1/Makefile.in, asn1/testsuite/Makefile.in, asnh323/Makefile.in,
+	asnh323/testsuite/Makefile.in, asnparser/Makefile.am,
+	asnparser/Makefile.in: Added files required by GNU coding standard
+
+2002-07-10 17:35  mangelo
+
+	* h323parser/h2250v4_new.asn: Remove h2250v4_new.asn
+
+2002-07-10 16:02  mangelo
+
+	* iiiasn1.dsw: Update VC project files
+
+2002-07-10 15:58  mangelo
+
+	* asnh323/asnh323.vcproj, asnparser/asnparser.vcproj,
+	h323parser/H323Parser.dsp, h323parser/H323Parser.vcproj: Update VC
+	project files
+
+2002-07-10 15:40  mangelo
+
+	* asn1/testsuite/asn1test.cpp: Add include config.h
+
+2002-07-10 14:06  mangelo
+
+	* h323parser/H323Parser.cpp: Fixed problem with the nonstandard
+	temparary lifetime in VC.Net
+
+2002-07-10 02:25  btrummer
+
+	* asn1/PERDecoder.cxx: Minor simplification at the end of
+	PERDecoder::decodeChoicePreamle().
+
+2002-07-04 02:46  mangelo
+
+	* asn1/testsuite/asn1test.vcproj, asnh323/asnh323.vcproj: Modify
+	asnparser output files
+
+2002-07-04 00:15  mangelo
+
+	* h323parser/: H323Parser.dsp, H323Parser.vcproj: modify the list
+	of asnparser generated files
+
+2002-07-04 00:02  mangelo
+
+	* iiiasn1.dsw, asn1/testsuite/asn1test.dsp, asnh323/asnh323.dsp,
+	asnparser/asnparser.dsp, asnparser/asnparser.vcproj: update VC
+	project files
+
+2002-07-03 22:47  mangelo
+
+	* config.h.in, asn1/asn1.h, config/ac_cxx_have_wstring.m4: added
+	explicit wstring typedef for GCC 2.95.x
+
+2002-07-03 03:15  btrummer
+
+	* asn1/PERDecoder.cxx: Fixed the assignment to beginPosition in
+	PERDecoder::setPosition().
+
+2002-07-03 01:26  btrummer
+
+	* asn1/PERDecoder.cxx: Introduced an upper bound for the size of
+	strings and arrays, like PWLib's PERDecoder does. Otherwise, broken
+	data may make the PERDecoder allocate hundrets of Megabytes RAM...
+
+2002-07-03 01:15  btrummer
+
+	* asn1/asn1.h: Added a range-check for PERDecoder::rollback(), so
+	beginPosition will never be set outside of endPosition.
+
+2002-07-03 01:01  btrummer
+
+	* asn1/asn1.cxx: Fixed two buffer overflows in
+	OBJECT_IDENTIFIER::decodeCommon(), that may occur, when decoding
+	invalid (random) data.
+
+2002-07-02 13:42  mangelo
+
+	* Makefile.am, Makefile.in, configure.in, asnh323/Makefile.am,
+	asnh323/Makefile.in, asnh323/testsuite/Makefile.am,
+	asnh323/testsuite/Makefile.in, asnparser/Makefile.am,
+	asnparser/Makefile.in: Modify Email address
+
+2002-07-02 00:25  mangelo
+
+	* iiiasn1.dsw, COPYING, Makefile.am, Makefile.in, aclocal.m4,
+	config.h.in, configure, configure.in, iiiasn1.sln, mpl-1.0.htm: Add
+	VC.Net and GCC 3.1 Support
+
+2002-07-02 00:21  mangelo
+
+	* config/: ac_cxx_have_wstring.m4, depcomp, iii_check_pwlib.m4,
+	mh-powerpc-mt: Remove PWLIB check
+
+2002-07-02 00:17  mangelo
+
+	* h323parser/: H323Parser.dsp, H323Parser.dsw, H323Parser.vcproj,
+	Q931pdu.cpp: Add VC.Net project file
+
+2002-07-02 00:09  mangelo
+
+	* asnh323/: Makefile.am, Makefile.in, asnh323.dsp, asnh323.vcproj:
+	Add VC.Net project file
+
+2002-07-02 00:07  mangelo
+
+	* asnh323/testsuite/h323test.dsp: [no log message]
+
+2002-07-02 00:02  mangelo
+
+	* asnh323/testsuite/: Makefile.am, Makefile.in, h323test.vcproj:
+	Add VC.Net project file
+
+2002-07-01 23:53  mangelo
+
+	* asn1/: Makefile.am, Makefile.in: Change Email and Homepage URL
+
+2002-07-01 23:45  mangelo
+
+	* asn1/: ASN1.dsp, ASN1.vcproj, AVNDecoder.cxx, AVNEncoder.cxx,
+	AssocVector.h, BERDecoder.cxx, BEREncoder.cxx, CoderEnv.cxx,
+	InvalidTracer.cxx, Makefile.am, Makefile.in, PERDecoder.cxx,
+	PEREncoder.cxx, ValidChecker.cxx, asn1.cxx, asn1.h, ios_helper.h:
+	Modify for VC.Net and GCC 3.1
+
+2002-07-01 23:40  mangelo
+
+	* asn1/testsuite/: Makefile.am, Makefile.in, asn1test.dsp,
+	asn1test.vcproj: add VC.Net project file
+
+2002-07-01 23:38  mangelo
+
+	* asn1/testsuite/asn1test.cpp: fixed problem when
+	vector<T>::iterator is not a typedef to T*
+
+2002-07-01 21:03  mangelo
+
+	* asnparser/: Makefile.in, aclocal.m4, asn_grammar.y, asn_lex.l,
+	asn_ref_grammar.y, asn_ref_lex.l, asnparser.dsp, asnparser.dsw,
+	asnparser.vcproj, configure, configure.in, getopt.c, main.cxx,
+	main.h, precompile.cpp, unistd.h, Makefile.am: Remove Pwlib
+	dependency
+
+2002-01-10 23:46  mangelo
+
+	* asn1/ValidChecker.cxx: Fixed INTEGER::isStrictlyValid() (Thanks
+	to Michael Almond)
+
+2002-01-10 23:43  mangelo
+
+	* asn1/asn1.cxx: Fixed OBJECT_IDENTIFIER::decodeCommon (Thanks to
+	George Biro)
+
+2001-11-13 10:40  mangelo
+
+	* asn1/asn1.h: Fixed the missing retrun in
+	OCTET_STRING::operator=(const char*)
+
+2001-10-24 21:47  mangelo
+
+	* asn1/asn1.h: fixed the wrong declaration of
+	SEQUNCE_OF::InfoType.type
+
+2001-10-09 11:39  mangelo
+
+	* asn1/asn1.cxx: fixed the problem when vector<char*>::iterator is
+	not char*
+
+2001-10-05 20:25  mangelo
+
+	* asnh323/testsuite/h323test.dsp: add h248test.cpp
+
+2001-10-05 20:19  mangelo
+
+	* asnh323/testsuite/: Makefile.am, Makefile.in: add h248test.cpp
+
+2001-10-05 20:19  mangelo
+
+	* asnh323/testsuite/h323test.cpp: add h248test
+
+2001-10-05 20:18  mangelo
+
+	* asnh323/testsuite/h248test.cpp: initial version
+
+2001-10-05 19:56  mangelo
+
+	* Makefile.in: Changed to automake 2.5
+
+2001-10-05 19:56  mangelo
+
+	* aclocal.m4, config.h.in: Changed to autoconf 2.52
+
+2001-10-05 19:52  mangelo
+
+	* configure.in, configure: Disable using custom allocator under
+	cygwin
+
+2001-10-05 19:49  mangelo
+
+	* asnparser/Makefile.in: Adjusted for the lastest Pwlib
+
+2001-10-05 19:42  mangelo
+
+	* config/depcomp: automake 2.5 file
+
+2001-10-05 19:41  mangelo
+
+	* config/missing: Update to auotmake 2.5
+
+2001-10-05 14:15  mangelo
+
+	* asn1/asn1.cxx: Change Log Sequence
+
+2001-10-05 14:11  mangelo
+
+	* asn1/PEREncoder.cxx: Added Log
+
+2001-10-05 14:08  mangelo
+
+	* asn1/: BEREncoder.cxx, BERDecoder.cxx, PERDecoder.cxx: Added Log
+
+2001-10-05 14:00  mangelo
+
+	* asn1/: asn1.cxx, AVNEncoder.cxx: Added Log
+
+2001-10-05 13:52  mangelo
+
+	* asn1/BEREncoder.cxx: Fixed BER CHOICE encording problem
+
+2001-10-05 13:52  mangelo
+
+	* asn1/BERDecoder.cxx: Fixed BER CHOICE decoding problem
+
+2001-10-05 13:51  mangelo
+
+	* asn1/asn1.h: Fixed wrong declarations of
+	AbstractString.TpyeInfo.type and BMPString.TypeInfo.type. Added
+	tagMode() to SEQUENCE
+
+2001-09-16 20:15  mangelo
+
+	* configure: changed to avoid warnings in autoconf 2.52
+
+2001-09-16 20:10  mangelo
+
+	* config/ac_cxx_have_wstring.m4, configure.in: changed to avoid
+	warning in autoconf 2.52
+
+2001-09-07 17:36  mangelo
+
+	* asnparser/: asn_lex.l, asn_ref_lex.l, asn_grammar.y,
+	asn_ref_grammar.y, main.h, main.cxx: add Log keyword substitution
+
+2001-09-07 17:23  mangelo
+
+	* asnparser/asn_lex.l: Remove a branch which was used for debuging
+
+2001-08-29 10:47  mangelo
+
+	* asn1/asn1.h: Fixed the declaration of SizeConstraint class
+	template
+
+2001-08-04 04:01  mangelo
+
+	* configure, asn1/Makefile.in: [no log message]
+
+2001-08-04 03:52  mangelo
+
+	* Makefile.in: [no log message]
+
+2001-08-04 03:42  mangelo
+
+	* README: [no log message]
+
+2001-08-04 03:38  mangelo
+
+	* README: [no log message]
+
+2001-08-04 03:35  mangelo
+
+	* Makefile.in: [no log message]
+
+2001-08-04 03:31  mangelo
+
+	* doc/sidebar.html: 
+	Remove this file
+
+2001-08-04 03:29  mangelo
+
+	* README: 
+	Rename from ReadMe
+
+2001-08-04 03:26  mangelo
+
+	* README: Rename ReadMe to README
+
+2001-08-04 03:24  mangelo
+
+	* Makefile.am: 
+	Remove "ReadMe entry"
+
+2001-08-04 02:39  mangelo
+
+	* h323parser/pointainer.h: add to cvs
+
+2001-08-04 02:21  mangelo
+
+	* Makefile.am: 
+	Remove doc, add ReadMe
+
+2001-08-04 01:59  mangelo
+
+	* README: Added to CVS
+
+2001-08-04 01:40  mangelo
+
+	* doc/pwtest1.cpp: Removed
+
+2001-08-04 01:38  mangelo
+
+	* doc/pwtest.cpp: removed
+
+2001-08-04 01:37  mangelo
+
+	* doc/comparison.html: Removed
+
+2001-08-04 01:36  mangelo
+
+	* doc/asn1tool.html: 
+	Remove
+
+2001-08-04 01:05  cityriver
+
+	* doc/iiitest1.cpp: remove file
+
+2001-08-03 23:26  cityriver
+
+	* doc/iiitest.cpp: remove iiitest.cpp
+
+2001-08-03 23:26  cityriver
+
+	* doc/iii01.gif: remove doc
+
+2001-08-03 23:16  cityriver
+
+	* doc/main.html: remove main.html
+
+2001-08-03 05:10  mangelo
+
+	* doc/: sidebar.html, main.html: add frame
+
+2001-08-03 05:07  mangelo
+
+	* doc/asn1tool.html: 
+	Use Frame
+
+2001-08-03 02:43  mangelo
+
+	* asn1/asn1.h: Fixed isValid() bugs
+
+2001-08-03 02:42  mangelo
+
+	* asn1/InvalidTracer.cxx: Add InvalidTracer
+
+2001-08-03 01:26  mangelo
+
+	* asn1/ValidChecker.cxx: Fixed isValid() bugs.
+
+2001-08-01 02:36  mangelo
+
+	* aclocal.m4, COPYING, INSTALL, Makefile.am, configure,
+	Makefile.in, config.h.in, iiiasn1.dsw, mpl-1.0.htm, stamp-h.in,
+	configure.in, asn1/AssocVector.h, asn1/AVNEncoder.cxx,
+	asn1/BEREncoder.cxx, asn1/CoderEnv.cxx, asn1/Makefile.am,
+	asn1/ios_helper.h, asn1/Makefile.in, asn1/PEREncoder.cxx,
+	asn1/AVNDecoder.cxx, asn1/PERDecoder.cxx, asn1/BERDecoder.cxx,
+	asn1/asn1.cxx, asn1/ValidChecker.cxx, asn1/ASN1.dsp, asn1/asn1.h,
+	asn1/InvalidTracer.cxx, asn1/testsuite/Makefile.am,
+	asn1/testsuite/asn1test.cpp, asn1/testsuite/asn1test.h,
+	asn1/testsuite/Makefile.in, asn1/testsuite/test.asn,
+	asn1/testsuite/asn1test.dsp, asnh323/address.asn,
+	asnh323/h235v2.asn, asnh323/h245v7.asn, asnh323/h248.asn,
+	asnh323/h4501.asn, asnh323/h45010.asn, asnh323/h4502.asn,
+	asnh323/h4503.asn, asnh323/h4504.asn, asnh323/h4505.asn,
+	asnh323/h4506.asn, asnh323/h4507.asn, asnh323/h4508.asn,
+	asnh323/h4509.asn, asnh323/Makefile.am, asnh323/lgc.asn,
+	asnh323/Makefile.in, asnh323/ro.asn, asnh323/ro.sed,
+	asnh323/h2250v4.asn, asnh323/asnh323.dsp,
+	asnh323/testsuite/asn1test.h, asnh323/testsuite/Makefile.am,
+	asnh323/testsuite/h225test.cpp, asnh323/testsuite/h245test.cpp,
+	asnh323/testsuite/h323test.cpp, asnh323/testsuite/h450test.cpp,
+	asnh323/testsuite/Makefile.in, asnh323/testsuite/h323test.dsp,
+	asnparser/aclocal.m4, asnparser/asnparser.dsp,
+	asnparser/asnparser.dsw, asnparser/asn_grammar.y,
+	asnparser/asn_lex.l, asnparser/asn_ref_grammar.y,
+	asnparser/asn_ref_lex.l, asnparser/configure,
+	asnparser/configure.in, asnparser/main.cxx, asnparser/main.h,
+	asnparser/Makefile.in, asnparser/precompile.cpp,
+	config/ac_cxx_have_new_iostream.m4, config/ac_cxx_have_stl.m4,
+	config/ac_cxx_have_wstring.m4, config/ac_cxx_namespaces.m4,
+	config/config.guess, config/config.sub,
+	config/iii_check_cxx_include_path.m4, config/iii_check_pwlib.m4,
+	config/iii_check_stlport.m4, config/iii_cross_tools.m4,
+	config/iii_enable_stl_thread.m4, config/install-sh,
+	config/mh-powerpc-mt, config/acx_pthread.m4, config/missing,
+	config/mkinstalldirs, doc/asn1tool.html, doc/comparison.html,
+	doc/iii01.gif, doc/iiitest.cpp, doc/iiitest1.cpp, doc/pwtest.cpp,
+	doc/pwtest1.cpp, h323parser/H323.def, h323parser/H323Parser.dsw,
+	h323parser/Q931pdu.h, h323parser/h225.sed,
+	h323parser/perattacher.h, h323parser/h2250v4_new.asn,
+	h323parser/H323Parser.dsp, h323parser/perattacher.cpp,
+	h323parser/Q931pdu.cpp, h323parser/H323Parser.cpp: Initial revision
+
+2001-08-01 02:36  mangelo
+
+	* aclocal.m4, COPYING, INSTALL, Makefile.am, configure,
+	Makefile.in, config.h.in, iiiasn1.dsw, mpl-1.0.htm, stamp-h.in,
+	configure.in, asn1/AssocVector.h, asn1/AVNEncoder.cxx,
+	asn1/BEREncoder.cxx, asn1/CoderEnv.cxx, asn1/Makefile.am,
+	asn1/ios_helper.h, asn1/Makefile.in, asn1/PEREncoder.cxx,
+	asn1/AVNDecoder.cxx, asn1/PERDecoder.cxx, asn1/BERDecoder.cxx,
+	asn1/asn1.cxx, asn1/ValidChecker.cxx, asn1/ASN1.dsp, asn1/asn1.h,
+	asn1/InvalidTracer.cxx, asn1/testsuite/Makefile.am,
+	asn1/testsuite/asn1test.cpp, asn1/testsuite/asn1test.h,
+	asn1/testsuite/Makefile.in, asn1/testsuite/test.asn,
+	asn1/testsuite/asn1test.dsp, asnh323/address.asn,
+	asnh323/h235v2.asn, asnh323/h245v7.asn, asnh323/h248.asn,
+	asnh323/h4501.asn, asnh323/h45010.asn, asnh323/h4502.asn,
+	asnh323/h4503.asn, asnh323/h4504.asn, asnh323/h4505.asn,
+	asnh323/h4506.asn, asnh323/h4507.asn, asnh323/h4508.asn,
+	asnh323/h4509.asn, asnh323/Makefile.am, asnh323/lgc.asn,
+	asnh323/Makefile.in, asnh323/ro.asn, asnh323/ro.sed,
+	asnh323/h2250v4.asn, asnh323/asnh323.dsp,
+	asnh323/testsuite/asn1test.h, asnh323/testsuite/Makefile.am,
+	asnh323/testsuite/h225test.cpp, asnh323/testsuite/h245test.cpp,
+	asnh323/testsuite/h323test.cpp, asnh323/testsuite/h450test.cpp,
+	asnh323/testsuite/Makefile.in, asnh323/testsuite/h323test.dsp,
+	asnparser/aclocal.m4, asnparser/asnparser.dsp,
+	asnparser/asnparser.dsw, asnparser/asn_grammar.y,
+	asnparser/asn_lex.l, asnparser/asn_ref_grammar.y,
+	asnparser/asn_ref_lex.l, asnparser/configure,
+	asnparser/configure.in, asnparser/main.cxx, asnparser/main.h,
+	asnparser/Makefile.in, asnparser/precompile.cpp,
+	config/ac_cxx_have_new_iostream.m4, config/ac_cxx_have_stl.m4,
+	config/ac_cxx_have_wstring.m4, config/ac_cxx_namespaces.m4,
+	config/config.guess, config/config.sub,
+	config/iii_check_cxx_include_path.m4, config/iii_check_pwlib.m4,
+	config/iii_check_stlport.m4, config/iii_cross_tools.m4,
+	config/iii_enable_stl_thread.m4, config/install-sh,
+	config/mh-powerpc-mt, config/acx_pthread.m4, config/missing,
+	config/mkinstalldirs, doc/asn1tool.html, doc/comparison.html,
+	doc/iii01.gif, doc/iiitest.cpp, doc/iiitest1.cpp, doc/pwtest.cpp,
+	doc/pwtest1.cpp, h323parser/H323.def, h323parser/H323Parser.dsw,
+	h323parser/Q931pdu.h, h323parser/h225.sed,
+	h323parser/perattacher.h, h323parser/h2250v4_new.asn,
+	h323parser/H323Parser.dsp, h323parser/perattacher.cpp,
+	h323parser/Q931pdu.cpp, h323parser/H323Parser.cpp: Import to
+	SourceForge
+
